@@ -24,7 +24,4 @@ router.post('/submit-user-data', authController.protect, viewsController.updateU
 //   });
 // });
 
-// router.get('/', viewsController.getOverview);
-// router.get('/tour/:slug',viewsController.getTour);
-// router.get('/login',viewsController.getLoginForm);
 module.exports = router;
