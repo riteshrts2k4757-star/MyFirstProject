@@ -1,5 +1,5 @@
 {
-  "name": "natours",
+  "name": "tourism",
   "version": "1.0.0",
   "description": "Learning node, express and mongoDB",
   "main": "test.js",
@@ -9,7 +9,7 @@
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundler.js",
     "build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundler.js"
   },
-  "author": "Jonas Schmedtmann",
+  "author": "Ritesh Kumar",
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
