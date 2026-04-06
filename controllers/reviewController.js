@@ -10,13 +10,6 @@ exports.setTourUserIds = (req, res, next) => {
   next();
 };
 
-
-
-
-
-
-
-
 exports.getAllReviews = factory.getAll(Review);
 exports.getReview = factory.getOne(Review);
 exports.createReview = factory.createOne(Review);
