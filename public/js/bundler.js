@@ -12911,7 +12911,7 @@ var login = exports.login = /*#__PURE__*/function () {
             (0, _alerts.showAlert)('success', 'Logged in successfully!');
             window.setTimeout(function () {
               location.assign('/');
-            }, 1500);
+            }, 1000);
           }
           _context.n = 3;
           break;
@@ -12991,7 +12991,7 @@ var updateSettings = exports.updateSettings = /*#__PURE__*/function () {
         case 1:
           res = _context.v;
           if (res.data.status === 'success') {
-            alert("User Data Updated Successfully!");
+            // alert("User Data Updated Successfully!");
             (0, _alerts.showAlert)('success', "".concat(type.toUpperCase(), " updated successfully!"));
           }
           _context.n = 3;
@@ -13244,7 +13244,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49196" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62102" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
