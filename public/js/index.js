@@ -8,15 +8,17 @@ const logOutBtn = document.querySelector('.nav__el--logout');
 const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-password');
 
-if(userDataForm){
-  userDataForm.addEventListener('submit', e=>{
+if (userDataForm)
+  userDataForm.addEventListener('submit', e => {
     e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    // console.log(name, email);
-    updateSettings({name, email},'data');
-  })
-}
+    const form = new FormData();
+    form.append('name', document.getElementById('name').value);
+    form.append('email', document.getElementById('email').value);
+    form.append('photo', document.getElementById('photo').files[0]);
+    console.log(form);
+
+    updateSettings(form, 'data');
+  });
 
 if (userPasswordForm)
   userPasswordForm.addEventListener('submit', async e => {
