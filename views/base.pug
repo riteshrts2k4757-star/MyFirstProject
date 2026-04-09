@@ -10,15 +10,16 @@ html
       title Natours | #{title}
   
   body
-    // HEADER
+  if typeof hideHeader === 'undefined' || !hideHeader
     include _header
         
-    // CONTENT
-    block content
-      h1 This is a placeholder heading
+  block content
+    h1 This is placeholder
       
-    // FOOTER
+  if typeof hideFooter === 'undefined' || !hideFooter
     include _footer
+
+
     //- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     //- <script type="module" src="js/login.js"></script>
 
@@ -28,4 +29,4 @@ html
     //-script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
     //- script(src='/js/login.js')
     script(src='/js/bundler.js')
-    //- script(src='/js/signup.js')
+    script(src='/js/signup.js')
