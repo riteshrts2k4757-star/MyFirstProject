@@ -136,6 +136,14 @@ tourSchema.virtual('reviews', {
   localField: "_id"
 });
 
+tourSchema.pre(/^find/, async function() {
+  this.populate({
+    path: 'guides',
+    select: '-__v -passwordChangedAt'
+  });
+});
+
+
 const Tour = mongoose.model('Tour', tourSchema);
 
 module.exports = Tour;
